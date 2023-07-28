@@ -1,5 +1,10 @@
 node_modules/
 .DS_Store
-dist/
 sources/
 package-lock.json
+src/
+.browserslist
+.editorconfig
+gulpfile.js
+package.json
+.gitignore
