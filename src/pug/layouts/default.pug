@@ -1,0 +1,20 @@
+block variables
+  - title = 'Default';
+
+doctype html
+
+html(class="no-js" lang="")
+  include ../includes/head.pug
+
+body
+  include ../blocks/header.pug
+
+  main
+    block content
+
+  include ../blocks/footer.pug
+
+  block scripts
+    script(src="js/app.js")
+
+

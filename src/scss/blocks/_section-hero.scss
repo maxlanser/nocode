@@ -1,0 +1,124 @@
+.hero {
+  padding-top: 134px;
+  padding-bottom: 94px;
+  position: relative;
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: $light-gradient;
+    max-width: 1090px;
+    width: 1090px;
+  }
+
+  &__body {
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: calc(30 / 20);
+    margin-bottom: 40px;
+  }
+
+  &__video {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #001A49;
+    content: '';
+    width: 590px;
+    height: 360px;
+    box-shadow: 0px 32px 44px 0px #818A8C;
+    cursor: pointer;
+    z-index: 2;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 70px;
+      height: 70px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url('../images/play.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    &--active {
+      &::before {
+        display: none;
+      }
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.students {
+  margin-top: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__list {
+    overflow: hidden;
+  }
+
+  &__item {
+    float: left;
+    box-sizing: content-box;
+    border-radius: 100%;
+    border: 4px solid #fff;
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+    margin-left: -30px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__foto {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    margin-left: 5px;
+    font-size: 16px;
+
+    i {
+      color: $purple;
+      font-style: normal;
+    }
+  }
+}

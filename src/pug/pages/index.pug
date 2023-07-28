@@ -1,0 +1,11 @@
+extends ../layouts/default.pug
+include ../includes/mixins.pug
+
+block variables
+  - title = 'Главная'
+
+block content
+  include ../blocks/_section-hero.pug
+  include ../blocks/_section-totals.pug
+  include ../blocks/_section-reviews.pug
+  include ../blocks/_section-faq.pug

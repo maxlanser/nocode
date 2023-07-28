@@ -1,0 +1,18 @@
+@import './vars';
+//@import './fonts';
+
+@import './normalize';
+
+@import './plugins';
+
+@import './base';
+@import './sprite.scss';
+@import './svg-icons';
+
+
+@import './common';
+
+@import './blocks/section-hero';
+@import './blocks/section-totals';
+@import './blocks/section-reviews';
+@import './blocks/section-faq';

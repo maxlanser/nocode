@@ -1,0 +1,103 @@
+.faq {
+  padding-top: 150px;
+  padding-bottom: 120px;
+  background-image: url("../images/faq_bg.svg");
+  background-repeat: no-repeat;
+  background-size: 154px 432px;
+  background-position: right calc(100% - 51px);
+
+  &__body {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  &__item {
+    border-radius: 21px;
+    overflow: hidden;
+    border: 1px solid lighten($color: #CD10FF, $amount: 40%);
+    padding: 28px 40px 28px 40px;
+
+    & + & {
+      margin-top: 20px;
+    }
+  }
+
+  &__label {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: $bold;
+    color: #001A49;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: margin-bottom .2s ease;
+
+    &--active {
+      margin-bottom: 20px;
+      &::after {
+        transform: rotate(180deg);
+      }
+
+      & + .faq__text {
+        max-height: 12em;
+        padding-bottom: 16px;
+      }
+    }
+
+    &::after {
+      display: block;
+      content: '';
+      height: 48px;
+      width: 48px;
+      border-radius: 100%;
+      background-image: linear-gradient(36deg, rgba(255, 215, 169, 0.20) 0%, rgba(255, 174, 112, 0.20) 100%), url("../images/faq_arrow.svg");
+      background-repeat: no-repeat, no-repeat;
+      background-position: left top, center center;
+      background-size: auto, 12px 9px;
+      transition: all .3s ease;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 26px;
+    padding-right: 103px;
+    transition: max-height .3s ease;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  &__footer {
+    margin-top: 90px;
+    padding-top: 30px;
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &-title {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    border-radius: 33px;
+    background: linear-gradient(90deg, rgba(255, 215, 169, 0.20) 0%, rgba(255, 174, 112, 0.20) 100%);
+    font-size: 12px;
+    font-weight: $bold;
+    padding: 8px 34px 7px 35px;
+    letter-spacing: 2.57px;
+    margin-bottom: 50px;
+    color: #9F06FF;
+  }
+}

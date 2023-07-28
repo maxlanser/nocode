@@ -1,0 +1,5 @@
+mixin picture(name, text, classname)
+  picture(class= classname)
+    source(type="image/avif" srcset=name + ".avif")
+    source(type="image/webp" srcset=name + ".webp")
+    img(alt= text src=name + ".jpg")
